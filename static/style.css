@@ -10,7 +10,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -22,10 +22,21 @@ h2 {
     margin-bottom: 20px;
 }
 
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
 input {
-    width: 90%;
+    width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -43,28 +54,4 @@ button {
 
 button:hover {
     background-color: #0056b3;
-}
-
-.alert {
-    margin-bottom: 10px;
-    padding: 10px;
-    color: white;
-    border-radius: 5px;
-}
-
-.alert.danger {
-    background-color: #dc3545;
-}
-
-.alert.success {
-    background-color: #28a745;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
 }

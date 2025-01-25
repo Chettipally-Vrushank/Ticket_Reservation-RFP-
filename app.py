@@ -19,8 +19,9 @@ class User(db.Model):
 
 # Routes
 @app.route("/")
+@app.route("/home")
 def home():
-    return redirect(url_for("login"))
+    return render_template("home.html")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -62,6 +63,10 @@ def dashboard():
 def logout():
     session.clear()
     return redirect(url_for("login"))
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
 
 
 

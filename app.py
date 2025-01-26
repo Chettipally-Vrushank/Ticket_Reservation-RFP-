@@ -59,6 +59,7 @@ def dashboard():
         return redirect(url_for("login"))
     return render_template("dashboard.html", name=session["user_name"])
 
+
 @app.route("/logout")
 def logout():
     session.clear()
@@ -69,6 +70,15 @@ def about():
     return render_template("about.html")
 
 
+
+@app.route('/search_trains', methods=['POST'])
+def search_trains():
+    # Logic for searching trains
+    from_station = request.form['from']
+    to_station = request.form['to']
+    travel_date = request.form['date']
+    # Add your processing logic here
+    return f"Searching trains from {from_station} to {to_station} on {travel_date}"
 
 
 
